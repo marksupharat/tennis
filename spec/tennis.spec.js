@@ -6,13 +6,21 @@ function tennispoint()
   {
     var str = '';
 
-    if(this.playAGetscore === 0)
+   if(this.playAGetscore === 0)
     {
         str += 'Love-';
     }
-    if(this.playBGetscore === 0)
+    else if(this.playAGetscore === 15)
     {
+        str += 'fifteen-';
+    }
+    if(this.playBGetscore === 0)
+     {
          str += 'Love';
+     }
+    else if(this.playBGetscore === 15)
+    {
+          str += 'fifteen';
     }
 
       return str;
@@ -27,5 +35,13 @@ function tennispoint()
 	      point.playBGetscore = 0;
 	      expect(point.echo()).toEqual('Love-Love');
 	  });
+    it('should  be  "fifteen = Love" when A=15 and B=0',function()
+    {
+       var point = new tennispoint();
+        point.playAGetscore = 15;
+        point.playBGetscore = 0;
+        expect(point.echo()).toEqual('fifteen-Love');
+    });
+    
 
 });
