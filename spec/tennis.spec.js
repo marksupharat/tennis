@@ -14,6 +14,11 @@ function tennispoint()
     {
         str += 'fifteen-';
     }
+    else if(this.playAGetscore === 30)
+    {
+         str += 'thirty-';
+    }
+
     if(this.playBGetscore === 0)
      {
          str += 'Love';
@@ -21,6 +26,10 @@ function tennispoint()
     else if(this.playBGetscore === 15)
     {
           str += 'fifteen';
+    }
+    else if(this.playBGetscore === 30)
+    {
+      str += 'thirty' ;
     }
 
       return str;
@@ -42,6 +51,12 @@ function tennispoint()
         point.playBGetscore = 0;
         expect(point.echo()).toEqual('fifteen-Love');
     });
-    
+    it('should  be  "thirty = Love" when A=30 and B=0',function()
+    {
+      var point = new tennispoint();
+      point.playAGetscore = 30;
+      point.playBGetscore = 0;
+      expect(point.echo()).toEqual('thirty-Love');
+    });
 
 });
