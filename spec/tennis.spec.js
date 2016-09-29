@@ -90,6 +90,33 @@ describe('Tennis game', function()
   {
    expect(point.playAgetscore()).toEqual('A won the game');
   });
+  //caseB get point
+  it('should  be  "Love-fifteen" when A=0 and B=15',function()
+  {
+   expect(point.playBgetscore()).toEqual('Love-fifteen');
+  });
+  it('should  be  "Love-thirty" when A=0 and B=30',function()
+  {
+   expect(point.playBgetscore()).toEqual('Love-thirty');
+  });
+  it('should  be  "Love-forty" when A=0 and B=40',function()
+  {
+   expect(point.playBgetscore()).toEqual('Love-forty');
+  });
+  it('should  be  "B won the game" when B win',function()
+  {
+   expect(point.playBgetscore()).toEqual('B won the game');
+  });
 
-
- });
+  it('should  be  "fifteen-fifteen" when A and B equal 15',function()
+  {
+    point.playAgetscore();
+    point.playBgetscore();
+   expect(point.echo()).toEqual('fifteen-fifteen');
+  });
+  it('should  be  "thirty-fifteen" when A=30 and B=15',function()
+  {
+    point.playAgetscore();
+   expect(point.echo()).toEqual('thirty-fifteen');
+  });
+});
