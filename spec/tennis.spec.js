@@ -114,7 +114,12 @@ describe('Tennis game', function()
     point.playBgetscore();
    expect(point.echo()).toEqual('fifteen-fifteen');
   });
-  
+  it('should  be  "thirty-fifteen" when A=30 and B=15',function()
+  {
+    point.playAgetscore();
+   expect(point.echo()).toEqual('thirty-fifteen');
+  });
+
 
 
 });
