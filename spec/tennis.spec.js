@@ -82,6 +82,10 @@ describe('Tennis game', function()
   {
    expect(point.playAgetscore()).toEqual('thirty-Love');
   });
+  it('should  be  "forty-Love" when A=40 and B=0',function()
+  {
+   expect(point.playAgetscore()).toEqual('forty-Love');
+  });
 
 
 });
