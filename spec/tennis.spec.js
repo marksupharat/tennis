@@ -107,12 +107,17 @@ describe('Tennis game', function()
   {
    expect(point.playBgetscore()).toEqual('B won the game');
   });
-  
+
   it('should  be  "fifteen-fifteen" when A and B equal 15',function()
   {
     point.playAgetscore();
     point.playBgetscore();
    expect(point.echo()).toEqual('fifteen-fifteen');
+  });
+  it('should  be  "thirty-fifteen" when A=30 and B=15',function()
+  {
+    point.playAgetscore();
+   expect(point.echo()).toEqual('thirty-fifteen');
   });
 
 
