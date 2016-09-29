@@ -90,6 +90,11 @@ describe('Tennis game', function()
   {
    expect(point.playAgetscore()).toEqual('A won the game');
   });
+  //caseB get point
+  it('should  be  "Love-fifteen" when A=0 and B=15',function()
+  {
+   expect(point.playBgetscore()).toEqual('Love-fifteen');
+  });
 
 
 });
