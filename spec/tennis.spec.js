@@ -86,6 +86,10 @@ describe('Tennis game', function()
   {
    expect(point.playAgetscore()).toEqual('forty-Love');
   });
+  it('should  be  "A won the game" when A win',function()
+  {
+   expect(point.playAgetscore()).toEqual('A won the game');
+  });
 
 
 });
