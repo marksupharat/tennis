@@ -103,6 +103,10 @@ describe('Tennis game', function()
   {
    expect(point.playBgetscore()).toEqual('Love-forty');
   });
+  it('should  be  "B won the game" when B win',function()
+  {
+   expect(point.playBgetscore()).toEqual('B won the game');
+  });
 
 
 });
