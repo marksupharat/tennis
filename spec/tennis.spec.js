@@ -95,6 +95,10 @@ describe('Tennis game', function()
   {
    expect(point.playBgetscore()).toEqual('Love-fifteen');
   });
+  it('should  be  "Love-thirty" when A=0 and B=30',function()
+  {
+   expect(point.playBgetscore()).toEqual('Love-thirty');
+  });
 
 
 });
